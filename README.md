@@ -1,31 +1,14 @@
-Objective: The goal is to build an ANN model that accurately classifies handwritten digits (0-9) using the MNIST dataset. The MNIST dataset is a widely used benchmark in machine learning and consists of 70,000 grayscale images of handwritten digits, each of size 28x28 pixels.
+The goal of this project was to develop an Artificial Neural Network (ANN) model capable of accurately classifying handwritten digits from the MNIST dataset. The MNIST dataset consists of 60,000 grayscale images of handwritten digits (0-9), each sized 28x28 pixels.
 
-Steps Involved
-#Data Preparation:
+Key Steps:
+Data Preparation: The dataset was loaded and preprocessed by normalizing pixel values and flattening the images into 784-dimensional vectors. It was then split into training (60,000 images) and testing (10,000 images) sets.
 
-#Loading the Dataset: The MNIST dataset is typically available in libraries like TensorFlow and Keras.
-#Preprocessing:
-Normalize pixel values to a range of 0 to 1 by dividing by 255.
-Reshape the images if necessary (flattening from 28x28 to 784).
-Split the dataset into training (60,000 images) and testing (10,000 images) sets.
-Model Design:
+Model Architecture: An ANN was designed with an input layer of 784 neurons, two hidden layers with ReLU activation functions, and an output layer with 10 neurons using softmax activation for multi-class classification.
 
-Input Layer: Accepts 784 features (flattened image).
-Hidden Layers: One or more hidden layers with activation functions like ReLU (Rectified Linear Unit).
-Output Layer: 10 neurons corresponding to the digits 0-9, typically using a softmax activation function to produce probabilities for each class.
-Compilation:
+Training: The model was trained using the Adam optimizer and categorical cross-entropy loss, with monitoring of validation accuracy to prevent overfitting.
 
-#Use a loss function appropriate for classification, such as categorical cross-entropy.
-Use an optimizer like Adam or SGD (Stochastic Gradient Descent) to minimize the loss function.
-Specify metrics to evaluate the model's performance, such as accuracy.
-Training the Model:
+Evaluation: The model was evaluated on the test set, achieving a high accuracy rate (often above 98%), demonstrating its effectiveness in digit classification.
 
-#Fit the model on the training data using a specified number of epochs and batch size.
-Monitor training and validation loss/accuracy to prevent overfitting.
-Model Evaluation:
+Results: The trained model successfully predicted unseen handwritten digits, showcasing the capability of ANNs to learn from and generalize on image data.
 
-#Evaluate the model's performance on the test set using metrics like accuracy, confusion matrix, precision, recall, and F1-score.
-Visualize the results to analyze the model's performance and identify misclassifications.
-Prediction:
-
-#Use the trained model to make predictions on new or unseen handwritten digit images.
+This project highlights the application of neural networks in computer vision tasks and serves as a foundational exploration into more advanced architectures and techniques in deep learning.
